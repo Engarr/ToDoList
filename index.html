@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Walidator hasła</title>
+		<script
+			src="https://kit.fontawesome.com/fe5dae04ab.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+
+
+		<div class="edid-section">
+			<div class="edit-title">Edytuj zadanie:</div>
+			<input
+				type="text"
+				class="edit-input"
+			    placeholder="Wpisz nową treść zadania..."
+			/>
+            <p class="edit-error">Muszisz wporwadzić nową treść</p>
+			<div class="edit-buttons">
+				<button class="edit-akcept">Zatwierdź</button>
+				<button class="edit-cancel">Anuluj</button>
+			</div>
+		</div>
+
+
+
+
+		<div class="app-body">
+			<header class="header">
+				<h1 class="header-title">To-Do-List</h1>
+				<div class="add-input">
+					<input
+						type="text"
+						class="input"
+						placeholder="Wprowadź treść zadania..."
+					/>
+					<button class="add-button">ADD</button>
+				</div>
+				<p class="error">Musisz wpisać treść zadania</p>
+			</header>
+			<section class="task-section">
+				<h2 class="task-section--title">Lista zadań:</h2>
+
+				<!-- <div class="task-body" id="0">
+					<p class="task-name">Zadanie do wykonania</p>
+
+					<div class="button-section">
+						<button class="done"><i class="fas fa-check"></i></button>
+						<button class="edit"><i class="fas fa-gear"></i></button>
+						<button class="delete"><i class="fas fa-trash-can"></i></button>
+					</div>
+				</div> -->
+			</section>
+		</div>
+
+		<script src="./main.js"></script>
+	</body>
+</html>
