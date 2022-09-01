@@ -20,6 +20,12 @@ let taskToEdit;
 let oldName;
 let root = document.documentElement;
 
+const enterCheck = () => {
+	if (event.keyCode === 13) {
+		checkForm();
+	}
+};
+
 const checkForm = () => {
 	if (inputTaskName.value !== '') {
 		createNewTask();
@@ -93,6 +99,8 @@ const deleteTask = (id) => {
 };
 
 addButton.addEventListener('click', checkForm);
+inputTaskName.addEventListener('keyup', enterCheck);
+
 editAkceptBtn.addEventListener('click', editTaskName);
 editCancelBtn.addEventListener('click', closeEditPanel);
 brush.addEventListener('click', showColorPanel);
