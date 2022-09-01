@@ -20,8 +20,6 @@ let taskToEdit;
 let oldName;
 let root = document.documentElement;
 
-
-
 const checkForm = () => {
 	if (inputTaskName.value !== '') {
 		createNewTask();
@@ -32,10 +30,9 @@ const checkForm = () => {
 	}
 };
 
-
-const showColorPanel=()=>{
-	colorPanel.classList.toggle("show")
-}
+const showColorPanel = () => {
+	colorPanel.classList.toggle('show');
+};
 
 const createNewTask = () => {
 	const newTask = document.createElement('div');
@@ -98,17 +95,26 @@ const deleteTask = (id) => {
 addButton.addEventListener('click', checkForm);
 editAkceptBtn.addEventListener('click', editTaskName);
 editCancelBtn.addEventListener('click', closeEditPanel);
-brush.addEventListener("click",showColorPanel)
+brush.addEventListener('click', showColorPanel);
 
 greenBtn.addEventListener('click', () => {
-	root.style.setProperty('--button-color', `rgb(147, 236, 14)`,
-	colorPanel.classList.remove("show"));
+	root.style.setProperty(
+		'--button-color',
+		`rgb(147, 236, 14)`,
+		colorPanel.classList.remove('show')
+	);
 });
 redBtn.addEventListener('click', () => {
-	root.style.setProperty('--button-color', `rgb(230, 44, 20)`,
-	colorPanel.classList.remove("show"));
+	root.style.setProperty(
+		'--button-color',
+		`rgb(230, 44, 20)`,
+		colorPanel.classList.remove('show')
+	);
 });
 orangeBtn.addEventListener('click', () => {
-	root.style.setProperty('--button-color', `rgb(250, 133, 24)`,
-	colorPanel.classList.remove("show"));
+	root.style.setProperty(
+		'--button-color',
+		`rgb(250, 133, 24)`,
+		colorPanel.classList.remove('show')
+	);
 });
