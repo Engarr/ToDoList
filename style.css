@@ -15,8 +15,61 @@ body {
 :root {
 	--first-color: rgb(134, 128, 128);
 	--second-color: rgb(194, 194, 194);
-	--task-body-color: ;
+	--button-color: rgb(250, 133, 24);
 }
+
+.color-panel {
+	width: 100px;
+	height: 200px;
+	position: absolute;
+	/* background-color: #fff; */
+	top: 20px;
+	right: -65px;
+	border-radius: 10px;
+
+}
+.color-panel i {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	font-size: 25px;
+	cursor: pointer;
+}
+.color-panel .colors {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 150px;
+	
+
+}
+.color-panel .green,
+.color-panel .red,
+.color-panel .orange {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.green {
+	background-color: rgb(147, 236, 14);
+}
+.red {
+	background-color: red;
+}
+.orange {
+	background-color: orange;
+}
+
+
+.show{
+	right: -25px;
+	transition: right .3s;
+}
+
+
 
 .app-body {
 	position: absolute;
@@ -29,7 +82,6 @@ body {
 	box-shadow: 0 0 20px black;
 	border-radius: 10px;
 	overflow: hidden;
-
 }
 .header {
 	display: flex;
@@ -42,12 +94,24 @@ body {
 		var(--second-color) 40%,
 		var(--first-color) 74%
 	);
-	overflow: hidden;
 }
+
+.brush {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+.brush:hover {
+	color: var(--button-color);
+}
+
 .header-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-bottom: 20px;
 	font-size: 36px;
 }
@@ -71,34 +135,31 @@ body {
 	border-radius: 10px;
 	border: none;
 	cursor: pointer;
-	transition: color 0.3s, background-color 0.3s;
+	transition: background-color 0.3s;
 }
 .add-button:hover {
-	color: #fff;
-	background-color: rgb(46, 103, 207);
+	background-color: var(--button-color);
 }
-.error{
-    opacity: 0;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    height: 30px;
-    margin-top: 10px;
-    
-    color: rgb(199, 61, 61);
-}
-.edit-error{
+.error {
 	opacity: 0;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    height: 30px;
-    margin-top: 10px;
-    
-    color: rgb(199, 61, 61);
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	height: 30px;
+	margin-top: 10px;
+
+	color: rgb(199, 61, 61);
 }
+.edit-error {
+	opacity: 0;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	height: 30px;
+	margin-top: 10px;
 
-
+	color: rgb(199, 61, 61);
+}
 
 .task-section--title {
 	display: flex;
@@ -123,15 +184,15 @@ body {
 	border-radius: 5px;
 	border: none;
 	font-size: 15px;
-    background: none;
+	background: none;
 	transition: color 0.3s;
 }
 .button-section button:hover {
-	color: rgb(46, 103, 207);
+	color: var(--button-color);
 }
 
 .edid-section {
-    display: none;
+	display: none;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -139,40 +200,39 @@ body {
 	height: 300px;
 	width: 60%;
 	border-radius: 10px;
-    box-shadow: 0 10 20px black;
-    z-index: 10;
+	box-shadow: 0 10 20px black;
+	z-index: 10;
 }
 .edit-buttons {
-    display: flex;
+	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	padding: 10px 20px;
 	width: 80%;
-
 }
 
-.edit-title{
-    text-transform: uppercase;
-    margin: 20px;
-    padding: 20px;
-    font-size: 26px;
-    color: #fff;
+.edit-title {
+	text-transform: uppercase;
+	margin: 20px;
+	padding: 20px;
+	font-size: 26px;
+	color: #fff;
 }
-.edit-buttons button{
-    height: 40px;
-    width: 200px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color .3s;
+.edit-buttons button {
+	height: 40px;
+	width: 200px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
-.edit-buttons button:hover{
-    background-color: rgb(46, 103, 207);
+.edit-buttons button:hover {
+	background-color: var(--button-color);
 }
 
-.edit-input{
-    width: 80%;
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: none;
+.edit-input {
+	width: 80%;
+	padding: 10px 30px;
+	border-radius: 10px;
+	border: none;
 }

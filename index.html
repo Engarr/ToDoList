@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Walidator hasła</title>
+		<title>Lista zadań</title>
 		<script
 			src="https://kit.fontawesome.com/fe5dae04ab.js"
 			crossorigin="anonymous"
@@ -17,28 +17,31 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-
-
 		<div class="edid-section">
 			<div class="edit-title">Edytuj zadanie:</div>
 			<input
 				type="text"
 				class="edit-input"
-			    placeholder="Wpisz nową treść zadania..."
+				placeholder="Wpisz nową treść zadania..."
 			/>
-            <p class="edit-error">Muszisz wporwadzić nową treść</p>
+			<p class="edit-error">Muszisz wporwadzić nową treść</p>
 			<div class="edit-buttons">
 				<button class="edit-akcept">Zatwierdź</button>
 				<button class="edit-cancel">Anuluj</button>
 			</div>
 		</div>
 
-
-
-
 		<div class="app-body">
+			<div class="color-panel">
+				<i class="fa-solid fa-palette brush"></i>
+				<div class="colors">
+					<div class="green"></div>
+					<div class="red"></div>
+					<div class="orange"></div>
+				</div>
+			</div>
 			<header class="header">
-				<h1 class="header-title">To-Do-List</h1>
+				<h1 class="header-title">Twoja lista zadań</h1>
 				<div class="add-input">
 					<input
 						type="text"
