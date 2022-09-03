@@ -24,7 +24,7 @@ body {
 	position: absolute;
 	/* background-color: #fff; */
 	top: 20px;
-	right: -65px;
+	
 	border-radius: 10px;
 
 }
@@ -69,7 +69,10 @@ body {
 	transition: right .3s;
 }
 
-
+.hide{
+	right: -65px;
+	transition: right .3s;
+}
 
 
 .app-body {

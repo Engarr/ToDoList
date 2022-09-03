@@ -37,7 +37,13 @@ const checkForm = () => {
 };
 
 const showColorPanel = () => {
-	colorPanel.classList.toggle('show');
+	if (colorPanel.classList.contains('hide')) {
+		colorPanel.classList.add('show');
+		colorPanel.classList.remove('hide');
+	} else {
+		colorPanel.classList.add('hide');
+		colorPanel.classList.remove('remove');
+	}
 };
 
 const createNewTask = () => {
@@ -74,6 +80,7 @@ const doneTask = (id) => {
 const editTask = (id) => {
 	taskToEdit = document.getElementById(id);
 	oldName = taskToEdit.childNodes[1].innerText;
+	editInput.value = taskToEdit.childNodes[1].innerText;
 	taskToEdit.childNodes[1].innerText = editInput;
 	edidSection.style.display = 'flex';
 };
@@ -109,20 +116,23 @@ greenBtn.addEventListener('click', () => {
 	root.style.setProperty(
 		'--button-color',
 		`rgb(147, 236, 14)`,
-		colorPanel.classList.remove('show')
+		colorPanel.classList.remove('show'),
+		colorPanel.classList.add('hide')
 	);
 });
 redBtn.addEventListener('click', () => {
 	root.style.setProperty(
 		'--button-color',
 		`rgb(230, 44, 20)`,
-		colorPanel.classList.remove('show')
+		colorPanel.classList.remove('show'),
+		colorPanel.classList.add('hide')
 	);
 });
 orangeBtn.addEventListener('click', () => {
 	root.style.setProperty(
 		'--button-color',
 		`rgb(250, 133, 24)`,
-		colorPanel.classList.remove('show')
+		colorPanel.classList.remove('show'),
+		colorPanel.classList.add('hide')
 	);
 });
